@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140417021334) do
+ActiveRecord::Schema.define(version: 20140417122408) do
 
   create_table "events", force: true do |t|
     t.text     "name"
-    t.text     "value_1"
-    t.text     "value_2"
+    t.text     "web_property"
+    t.text     "url"
+    t.text     "type"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "web_properties", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
