@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140419205422) do
+ActiveRecord::Schema.define(version: 20140420001742) do
 
   create_table "events", force: true do |t|
     t.text     "name"
@@ -50,6 +50,9 @@ ActiveRecord::Schema.define(version: 20140419205422) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "web_properties", ["user_id"], name: "index_web_properties_on_user_id"
 
 end

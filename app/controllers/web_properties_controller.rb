@@ -69,6 +69,6 @@ class WebPropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def web_property_params
-      params.require(:web_property).permit(:name, :url, :user_id)
+      params.require(:web_property).permit(:name, :url)
     end
 end

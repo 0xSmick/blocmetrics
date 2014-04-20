@@ -1,3 +1,4 @@
 class WebProperty < ActiveRecord::Base
-  belong_to :user
+  belongs_to :user
+  has_many :events
 end
