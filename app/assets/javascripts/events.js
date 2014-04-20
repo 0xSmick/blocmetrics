@@ -5,3 +5,10 @@ console.log("that fake event will load on every refresh")
 
 
 onPageLoad: console.log(document.URL)
+
+
+var _bm_event = {
+  name: "Pageview",
+  url: document.URL,
+}
+

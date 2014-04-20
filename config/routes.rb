@@ -1,5 +1,6 @@
 Blocmetrics::Application.routes.draw do
 
+  devise_for :users
   resources :web_properties
 
   resources :events

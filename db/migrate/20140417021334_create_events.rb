@@ -5,7 +5,6 @@ class CreateEvents < ActiveRecord::Migration
       t.text :web_property
       t.text :url
       t.text :type
-      t.integer :user_id
 
       t.timestamps
     end
