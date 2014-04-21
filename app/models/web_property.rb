@@ -1,4 +1,7 @@
 class WebProperty < ActiveRecord::Base
-  belongs_to :user
   has_many :events
+  belongs_to :user
+
+  default_scope { order( 'created_at DESC' ) }
+
 end

@@ -15,6 +15,7 @@ class WebPropertiesController < ApplicationController
   # GET /web_properties/new
   def new
     @web_property = WebProperty.new
+    authorize @web_property
   end
 
   # GET /web_properties/1/edit
@@ -24,7 +25,7 @@ class WebPropertiesController < ApplicationController
   # POST /web_properties
   # POST /web_properties.json
   def create
-    @web_property = WebProperty.new(web_property_params)
+    @web_property = current_user.WebProperty.new(web_property_params)
 
     respond_to do |format|
       if @web_property.save
