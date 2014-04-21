@@ -4,4 +4,8 @@ class WebProperty < ActiveRecord::Base
 
   default_scope { order( 'created_at DESC' ) }
 
+  def role?(base_role)
+    role == base_role.to_s
+  end
+
 end

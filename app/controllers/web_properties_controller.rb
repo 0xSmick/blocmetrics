@@ -5,6 +5,7 @@ class WebPropertiesController < ApplicationController
   # GET /web_properties.json
   def index
     @web_properties = WebProperty.all
+    authorize @web_properties
   end
 
   # GET /web_properties/1
@@ -36,6 +37,7 @@ class WebPropertiesController < ApplicationController
         format.json { render json: @web_property.errors, status: :unprocessable_entity }
       end
     end
+    authorize @web_property
   end
 
   # PATCH/PUT /web_properties/1
