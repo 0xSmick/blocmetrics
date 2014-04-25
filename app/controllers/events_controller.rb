@@ -1,9 +1,17 @@
 class EventsController < ApplicationController
+  respond_to :json, :html, :jpg
 
   def index
     @events = Event.all
+  end
 
   def create
+    binding.pry
+
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    response.headers["Access-Control-Max-Age"] = "1728000"
 
     #Where is this HTTP request gog to come from?
     #POST request is going to be coming from different domain.

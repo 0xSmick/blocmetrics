@@ -3,7 +3,8 @@ Blocmetrics::Application.routes.draw do
   devise_for :users
   resources :web_properties
 
-  resources :events
+  resources :events 
+  match 'events' => "events#index", via: :options
 
   root to: 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
