@@ -2,16 +2,22 @@ class EventsController < ApplicationController
   respond_to :json, :html, :jpg
 
   def index
+
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    response.headers["Access-Control-Max-Age"] = "1728000"
+    
     @events = Event.all
   end
 
   def create
     #binding.pry
 
-    #response.headers["Access-Control-Allow-Origin"] = "*"
-    #response.headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS"
-    #response.headers["Access-Control-Allow-Headers"] = "Content-Type"
-    #response.headers["Access-Control-Max-Age"] = "1728000"
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    response.headers["Access-Control-Max-Age"] = "1728000"
 
     @web_property = WebProperty.find(params[:web_property_id])
 
