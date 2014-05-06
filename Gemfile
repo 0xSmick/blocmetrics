@@ -12,7 +12,7 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :developmentgit  do
+group :development  do
   gem 'sqlite3'
   gem 'pry-rails'
 end
