@@ -12,7 +12,7 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :development do
+group :developmentgit  do
   gem 'sqlite3'
   gem 'pry-rails'
 end
@@ -49,6 +49,10 @@ gem 'devise'
 gem 'pundit'
 
 gem 'pry'
+
+gem 'chart-js-rails'
+
+gem 'highcharts-rails', '~> 4.0.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

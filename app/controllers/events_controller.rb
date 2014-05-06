@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  respond_to :json, :html, :jpg
+  respond_to :json, :html, :jpg, :js
 
   def index
 
@@ -7,8 +7,11 @@ class EventsController < ApplicationController
     response.headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS"
     response.headers["Access-Control-Allow-Headers"] = "Content-Type"
     response.headers["Access-Control-Max-Age"] = "1728000"
-    
-    @events = Event.all
+
+
+    @web_property = WebProperty.find(params[:web_property_id])
+    # @event = Event.find(params[])
+    @events = @web_property.events
   end
 
   def create

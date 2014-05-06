@@ -1,7 +1,7 @@
 var _bm_pageview = {
   type: "pageview",
   web_property_id: 1,
-  url: "test.com",
+  url: "url",
 }
 
 var _bm_event = new XMLHttpRequest();
