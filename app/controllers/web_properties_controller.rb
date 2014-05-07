@@ -11,6 +11,9 @@ class WebPropertiesController < ApplicationController
   # GET /web_properties/1
   # GET /web_properties/1.json
   def show
+    @web_property = WebProperty.find(params[:id])
+    @events = @web_property.events
+
   end
 
   # GET /web_properties/new

@@ -9,9 +9,9 @@ class EventsController < ApplicationController
     response.headers["Access-Control-Max-Age"] = "1728000"
 
 
-    @web_property = WebProperty.find(params[:web_property_id])
-    # @event = Event.find(params[])
+    @web_property = WebProperty.find(params[:id])
     @events = @web_property.events
+    #@events = Event.all
   end
 
   def create
